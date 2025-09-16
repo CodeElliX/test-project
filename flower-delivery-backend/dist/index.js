@@ -19,6 +19,11 @@ app.use('/api/shops', products_1.default);
 app.use("/api/orders", orders_1.default);
 const mongoUri = process.env.MONGO_URI || 'mongodb://localhost:27017/flower_delivery';
 const port = parseInt(process.env.PORT || "3001", 10);
-mongoose_1.default.connect(mongoUri).then(() => {
+mongoose_1.default.connect(mongoUri)
+    .then(() => {
+    console.log("✅ Mongo connected");
     app.listen(port, "0.0.0.0", () => console.log(`Backend on ${port}`));
+})
+    .catch(err => {
+    console.error("❌ MongoDB connection error:", err);
 });
