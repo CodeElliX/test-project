@@ -8,8 +8,8 @@ import productsRouter from './routes/products'
 import ordersRouter from "./routes/orders"
 
 const app = express()
-app.use(cors({ origin: '*' }));
-app.use(express.json());
+app.use(cors())
+app.use(express.json())
 
 app.use('/api/shops', shopsRouter)
 app.use('/api/shops', productsRouter)
@@ -18,5 +18,5 @@ app.use("/api/orders", ordersRouter)
 const mongoUri = process.env.MONGO_URI || 'mongodb://localhost:27017/flower_delivery';
 const port = process.env.PORT || 3001;
 mongoose.connect(mongoUri).then(() => {
-    app.listen(port, () => console.log(`Backend on ${port}`));
+  app.listen(port, () => console.log(`Backend on ${port}`));
 });

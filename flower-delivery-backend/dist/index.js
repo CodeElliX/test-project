@@ -12,7 +12,7 @@ const shops_1 = __importDefault(require("./routes/shops"));
 const products_1 = __importDefault(require("./routes/products"));
 const orders_1 = __importDefault(require("./routes/orders"));
 const app = (0, express_1.default)();
-app.use((0, cors_1.default)({ origin: '*' }));
+app.use((0, cors_1.default)());
 app.use(express_1.default.json());
 app.use('/api/shops', shops_1.default);
 app.use('/api/shops', products_1.default);
