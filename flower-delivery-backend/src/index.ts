@@ -8,8 +8,8 @@ import productsRouter from './routes/products'
 import ordersRouter from "./routes/orders"
 
 const app = express()
-app.use(cors())
-app.use(express.json())
+app.use(cors({ origin: '*' }));
+app.use(express.json());
 
 app.use('/api/shops', shopsRouter)
 app.use('/api/shops', productsRouter)
