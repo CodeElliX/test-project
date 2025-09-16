@@ -64,6 +64,7 @@ npm start
 
 ## 📁 Структура проекта
 
+```text
 test-project/
 │
 ├── flower-delivery/                     # React-приложение (Frontend)
@@ -86,4 +87,4 @@ test-project/
 │   ├── package.json
 │   ├── tsconfig.json
 │   └── .env                            # Переменные окружения
-
+```
