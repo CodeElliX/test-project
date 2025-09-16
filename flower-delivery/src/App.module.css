@@ -1,0 +1,50 @@
+.top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    text-align: start;
+    margin-left: 2%;
+    font-weight: 600;
+    color: rgb(21, 21, 120);
+    border: 1px solid rgba(128, 128, 128, 0.4);
+    border-radius: 4px;
+}
+
+.active_menu {
+    font-weight: bolder;
+}
+
+.menu span {
+    display: inline-block;
+    min-width: 100px;
+    text-align: center;
+    padding: 10px 30px;
+    cursor: pointer;
+}
+
+.menu span:not(:last-child) {
+    border-right: 1px solid rgb(21, 21, 120);
+}
+
+.sort_menu {
+    display: flex;
+    gap: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    transition: all 0.8s ease-in-out;
+}
+
+.sort_menu span:hover {
+    text-decoration: underline;
+    color: rgb(21, 21, 120);
+    cursor: pointer;
+}
+
+.sort_menu span:active {
+    color: rgb(30, 30, 230);
+}

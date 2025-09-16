@@ -1,0 +1,30 @@
+.wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrap h1 {
+    font-size: 32px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    color: cornflowerblue;
+}
+
+.shops {
+    margin-top: 5%;
+}
+
+.shop {
+    background-color: lightskyblue;
+    min-width: 200px;
+    color: aliceblue;
+
+}
+
+.shop:focus {
+    outline: none;
+}
+
+.active {
+    background-color: rgb(87, 142, 244);
+}
