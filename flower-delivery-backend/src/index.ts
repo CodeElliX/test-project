@@ -1,3 +1,5 @@
+import dotenv from 'dotenv'
+dotenv.config()
 import express from 'express'
 import mongoose from 'mongoose'
 import cors from 'cors'
@@ -13,12 +15,8 @@ app.use('/api/shops', shopsRouter)
 app.use('/api/shops', productsRouter)
 app.use("/api/orders", ordersRouter)
 
-const mongoUri = 'mongodb://localhost:27017/flower_delivery'
-
-mongoose.connect(mongoUri)
-    .then(() => {
-        app.listen(3001, () => {
-            console.log('Backend запущений на http://localhost:3001')
-        })
-    })
-    .catch(err => console.error(err))
+const mongoUri = process.env.MONGO_URI || 'mongodb://localhost:27017/flower_delivery';
+const port = process.env.PORT || 3001;
+mongoose.connect(mongoUri).then(() => {
+    app.listen(port, () => console.log(`Backend on ${port}`));
+});

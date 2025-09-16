@@ -1,9 +1,12 @@
 {
   "name": "flower-delivery-backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Backend for Flower Delivery App using Node.js, Express, TypeScript, and MongoDB",
+  "main": "dist/index.js",
   "scripts": {
+    "dev": "nodemon src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -11,6 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
     "express": "^5.1.0",
     "mongoose": "^8.18.1"
   },
@@ -21,5 +25,8 @@
     "nodemon": "^3.1.10",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2"
+  },
+  "engines": {
+    "node": ">=20.0.0"
   }
 }
