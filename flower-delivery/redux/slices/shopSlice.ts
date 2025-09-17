@@ -6,6 +6,7 @@ export type Shop = { _id: string; name: string }
 export const fetchShops = createAsyncThunk<Shop[]>(
   'shops/fetchShops',
   async () => {
+    console.log("API URL:", process.env.NEXT_PUBLIC_API_URL);
     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/shops`)
     return (await res.json()) as Shop[]
   }
