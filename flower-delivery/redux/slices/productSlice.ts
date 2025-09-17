@@ -5,7 +5,9 @@ import type { Product } from './cartSlice'
 export const fetchProducts = createAsyncThunk<Product[], { shopId: string; query: string }>(
   'products/fetchProducts',
   async ({ shopId, query }) => {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/shops/${shopId}/products${query}`);
+    const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://test-project-production-6234.up.railway.app";
+    console.log("API URL:", API_URL);
+    const res = await fetch(`${API_URL}/api/shops/${shopId}/products${query}`);
     return (await res.json()) as Product[];
   }
 );

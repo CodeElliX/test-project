@@ -27,7 +27,8 @@ export const Cart = () => {
         };
 
         try {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/orders`, {
+            const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://test-project-production-6234.up.railway.app";
+            const res = await fetch(`${API_URL}/api/orders`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(order),
