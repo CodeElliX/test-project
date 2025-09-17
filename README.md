@@ -4,11 +4,11 @@ A fully functional flower delivery web application built with a modern tech stac
 
 ## Project details:
 
-Public link: https://test-project-89fm-3w9efarwl-ellis-projects-e9fd513e.vercel.app/
-Root git repository: https://github.com/CodeElliX/test-project
-Frontend git repository: https://github.com/CodeElliX/test-project/tree/main/flower-delivery
-Git repository backend: https://github.com/CodeElliX/test-project/tree/main/flower-delivery-backend
-README.md: https://github.com/CodeElliX/test-project/blob/main/README.md
+### Public link: https://test-project-89fm-3w9efarwl-ellis-projects-e9fd513e.vercel.app/
+### Root git repository: https://github.com/CodeElliX/test-project
+### Frontend git repository: https://github.com/CodeElliX/test-project/tree/main/flower-delivery
+### Git repository backend: https://github.com/CodeElliX/test-project/tree/main/flower-delivery-backend
+### README.md: https://github.com/CodeElliX/test-project/blob/main/README.md
 
 ## 🚀 Technology stack
 
